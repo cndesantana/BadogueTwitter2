@@ -27,6 +27,5 @@ shinyUI(fluidPage(
   
   mainPanel(
     h4("Last few Tweets"),
-    tableOutput("table"),
     plotOutput("wordcl"))
 ))

@@ -23,10 +23,6 @@ shinyServer(function (input, output) {
     
   })
   
-  output$table = renderTable(function () {
-    head(rawData()[1],n=input$obs)
-  })
-  
   output$wordcl = renderPlot(function(){
     tw.text = enc2native(rawData()$text)
     tw.text = tolower(tw.text)
