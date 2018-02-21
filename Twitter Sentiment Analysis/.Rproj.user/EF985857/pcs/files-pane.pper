@@ -1,0 +1,9 @@
+{
+    "path" : "~/Twitter Sentiment Analysis",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

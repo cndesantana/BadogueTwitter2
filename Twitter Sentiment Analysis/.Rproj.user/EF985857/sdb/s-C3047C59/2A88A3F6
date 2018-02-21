@@ -1,0 +1,17 @@
+{
+    "contents" : "\n# This is the server logic for a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nlibrary(twitteR)\nlibrary(httr)\nlibrary(wordcloud)\nlibrary(tm)\nsource(\"twitterAppCredentials.R\")\n\nshinyServer(function (input, output) {\n  \n  setup_twitter_oauth(api_key,api_secret,access_token,access_token_secret)\n  \n  rawData = reactive(function(){\n    tweets = searchTwitter(input$term, n=input$count,lang=input$lang)\n    tweets = twListToDF(tweets)\n    \n  })\n  \n  output$table = renderTable(function () {\n    head(rawData()[1],n=input$obs)\n  })\n  \n  output$wordcl = renderPlot(function(){\n    tw.text = enc2native(rawData()$text)\n    tw.text = tolower(tw.text)\n    tw.text = removeWords(tw.text,c(stopwords(input$lang),\"rt\",\"htt\\\\*\"))\n    tw.text = removePunctuation(tw.text,TRUE)\n    tw.text = unlist(strsplit(tw.text,\" \"))\n    \n    word = sort(table(tw.text),TRUE)\n    \n    wordc = head(word,n=50)\n    \n    wordcloud(names(wordc),wordc,random.color=TRUE,colors=rainbow(10),scale=c(15,2))\n  })\n})",
+    "created" : 1438005623704.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1256786405",
+    "id" : "2A88A3F6",
+    "lastKnownWriteTime" : 1438119325,
+    "path" : "~/Twitter Sentiment Analysis/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

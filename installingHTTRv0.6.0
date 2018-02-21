@@ -1,0 +1,7 @@
+packageurl = "http://cran.us.r-project.org/src/contrib/Archive/httr/httr_0.6.0.tar.gz"
+install.packages(packageurl, repos=NULL, type="source")
+
+or 
+
+library(repmis)     #haven't tried this yet
+InstallOldPackages("httr", "0.6.0")    

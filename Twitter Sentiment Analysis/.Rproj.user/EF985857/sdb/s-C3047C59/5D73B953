@@ -1,0 +1,17 @@
+{
+    "contents" : "api_key <- \"3I8JehozX8N4Bojg0qSdmDFLX\"\n\napi_secret <- \"QBg2E2TcqtvlK0vrRIwIWZGSXjlPoYaLXwjrePRDLztepAU6cg\"\n\naccess_token <- \"2433072234-seryr8c6OCyNU5veonMKf5hvX8JKCUOiA20TcoC\"\n\naccess_token_secret <- \"rHOyUzdhL5GN6lqWh3LOxmuKD2hb0IvpeJm4hrs24O4nx\"",
+    "created" : 1438119247303.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3599912859",
+    "id" : "5D73B953",
+    "lastKnownWriteTime" : 1438119325,
+    "path" : "~/Twitter Sentiment Analysis/twitterAppCredentials.R",
+    "project_path" : "twitterAppCredentials.R",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
